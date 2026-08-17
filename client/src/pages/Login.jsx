@@ -27,7 +27,7 @@ const Login = ({getUser}) => {
    
     try{
       setLoading(true)
-      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'
+      const serverUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
       const response = await fetch(`${serverUrl}/api/auth/login`,{
         method:"POST",
         headers:{
