@@ -15,7 +15,7 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'
+      const serverUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
       const res = await fetch(`${serverUrl}/api/products`, {
         credentials: 'include'
       });
@@ -79,7 +79,7 @@ const Products = () => {
 
   const fetchCategories = async () => {
     try {
-      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:5000'
+      const serverUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
       const res = await fetch(`${serverUrl}/api/products/categories`, {
         credentials: 'include'
       });
